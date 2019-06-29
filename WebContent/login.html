@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html>
+
+<!-- Head -->
+<head>
+
+	<title>著海学习系统</title>
+
+	<!-- Meta-Tags -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- //Meta-Tags -->
+
+	<!-- Style --> <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+
+
+
+</head>
+<!-- //Head -->
+
+<!-- Body -->
+<body>
+
+	<h1>登录</h1>
+
+	<div class="container w3layouts agileits">
+
+		<div class="login w3layouts agileits">
+			<h2>登 录</h2>
+			<form action="LoginServlet" method="post">
+				<input type="text" name="name" placeholder="用户名" required="">
+				<input type="password" name="pd" placeholder="密码" required="">
+				<tr>
+    			<td height="40" align="right" name="verify">系统验证码：&nbsp;</td>
+    			<td>&nbsp;<img border=0 src="verifyCode.jsp" ></td>
+  				</tr><br>
+				<input type="text" name="syz" class="user" placeholder="验证码:"> <br>
+			
+			<ul class="tick w3layouts agileits">
+				<li>
+					<input type="checkbox" id="brand1" value="">
+					<label for="brand1"><span></span>记住我</label>
+				</li>
+			</ul>
+			<div class="send-button w3layouts agileits">
+				
+					<input type="submit" value="登 录">
+				
+			</div>
+			</form>
+			<a href="wj.jsp">记住密码?</a>
+			<div class="social-icons w3layouts agileits">
+				<p>- 其他方式登录 -</p>
+				<ul>
+					<li class="qq"><a href="#">
+					<span class="icons w3layouts agileits"></span>
+					<span class="text w3layouts agileits">QQ</span></a></li>
+					<li class="weixin w3ls"><a href="#">
+					<span class="icons w3layouts"></span>
+					<span class="text w3layouts agileits">微信</span></a></li>
+					<!--<li class="weibo aits"><a href="#">
+					<span class="icons agileits"></span>
+					<span class="text w3layouts agileits">微博</span></a></li>-->
+					<div class="clear"> </div>
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="register w3layouts agileits">
+			<h2>注 册</h2>
+			<form action="register" method="post" onsubmit="return formCheck() ">
+				<input type="text" name="name" placeholder="用户名" required="">
+				<br>
+   			头&nbsp&nbsp&nbsp&nbsp像:&nbsp&nbsp&nbsp 
+  			 <img id="pic" src="images\face\Image1.jpg" /><br>
+   			请选择头像:
+   			<select id="imageSelect" onchange="setImg(this)" name="image">
+   			<option value="images\face\Image1.jpg">头像一</option>
+   			<option value="images\face\Image2.jpg">头像二</option>
+   			<option value="images\face\Image3.jpg">头像三</option>
+   			<option value="images\face\Image4.jpg">头像四</option>
+   			<option value="images\face\Image5.jpg">头像五</option>
+   			</select><br>
+				<input type="text" name="el" placeholder="邮箱" required="">
+				<input type="password" id="pd" name="pd" placeholder="密码" required="">
+				<input type="password" id="pd2" name="pd2" placeholder="确认密码" required="">
+			
+			<div class="send-button w3layouts agileits">
+				
+					<input type="submit" value="免费注册">
+				
+			</div>
+			</form>
+			<div class="clear"></div>
+		</div>
+
+		<div class="clear"></div>
+
+	</div>
+
+</body>
+<!-- //Body -->
+<script type="text/javascript">
+function setImg(obj){
+	var imageSrc=document.getElementById("imageSelect").value;
+	document.getElementById("pic").src=imageSrc;
+	
+}
+function formCheck(){
+	var pwd1 = document.getElementById("pd").value;
+	var pwd2 = document.getElementById("pd2").value;
+	if(pwd1!=pwd2){
+		alert("两次输入的密码不一致！");
+		return false;
+	}else{
+		return true;
+	}
+}
+</script>
+</html>

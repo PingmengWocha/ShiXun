@@ -1,0 +1,50 @@
+/* CSS Document */
+*{
+margin=0px;
+padding=0;
+}
+html, body
+{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow:hidden;
+}
+#ninjia{
+height:100%;width:100%;
+border: 1px solid green;
+position:fixed;
+}
+#ninjia.ninjia-image1{
+postition:absoult;
+background-size:cover;
+transition:3s;
+}
+#login{
+position:absolute;
+top:0;
+left:35%;
+}
+p{
+font-size:25px;
+color=white;
+margin-left:55px;
+font-family:"微软雅黑";
+}
+.user{
+position=absolute;
+top:50px;
+font-size:18px;
+width:270px;
+height:44px;
+color=white;
+background:rgba(45,45,45,0.15);
+border-radius:6px;
+border:1px solid rgba(255,255,255,15);
+box-shadow:0 2px 3px 0 rgba(0,0,0,1)inset;
+text-indent:10px;
+}
+.user-pdw{
+position:absolute;
+top:110px;
+}
